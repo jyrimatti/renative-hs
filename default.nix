@@ -100,8 +100,8 @@ let
        version = "0.1.1";
        src = fetchgit {
          url = "https://github.com/jyrimatti/react-native-hs.git";
-         sha256 = "0f6bzm072wxp47bxxyhf5vgz8yac7107prixga341bkxblzj56zy";
-         rev = "edbed40baa5391c907c42657f5365e62e4cc02ef";
+         sha256 = "062ypzgk1dyv74svgkz6sqvs6a8a8c3ky6r1nr97qbg0jgipb8y3";
+         rev = "73734c37ec787d3fd785ee4612675bb8956f3b46";
        };
        libraryHaskellDepends = [
         react-hs text time transformers containers network-uri
@@ -138,11 +138,11 @@ let
        license = stdenv.lib.licenses.bsd3;
      };
 
-  react-hs = haskellPackages.callPackage react-hs-local { ghcjs-base = ghcjsbase; };
-  #react-hs = haskellPackages.callPackage react-hs-forked { ghcjs-base = ghcjsbase; };
+  #react-hs = haskellPackages.callPackage react-hs-local { ghcjs-base = ghcjsbase; };
+  react-hs = haskellPackages.callPackage react-hs-forked { ghcjs-base = ghcjsbase; };
 
-  react-native-hs = haskellPackages.callPackage react-native-hs-local { react-hs = react-hs; ghcjs-base = ghcjsbase; };
-  #react-native-hs = haskellPackages.callPackage react-native-hs-git { react-hs = react-hs; ghcjs-base = ghcjsbase; };
+  #react-native-hs = haskellPackages.callPackage react-native-hs-local { react-hs = react-hs; ghcjs-base = ghcjsbase; };
+  react-native-hs = haskellPackages.callPackage react-native-hs-git { react-hs = react-hs; ghcjs-base = ghcjsbase; };
 
   drv = haskellPackages.callPackage myproject {
     react-hs = react-hs;
