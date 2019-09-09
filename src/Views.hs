@@ -15,9 +15,9 @@
 module Views where
 
 import Prelude (($))
-import           React.Flux.Rn.Views (mkControllerView,StoreArg,View)
+import           React.Flux.Rn.Views (mkControllerView,StoreArg,ReactView)
 import           Store (AppState)
 
-app :: View ()
+app :: ReactView ()
 app = mkControllerView @'[StoreArg AppState] "My app" $ \_ () ->
     "Hello world!"

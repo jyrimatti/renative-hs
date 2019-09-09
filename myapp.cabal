@@ -19,7 +19,6 @@ executable myapp
                        react-native-hs,
                        aeson,
                        containers,
-                       http-common,
                        network-uri,
                        semigroups
 
