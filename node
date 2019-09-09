@@ -1,0 +1,9 @@
+#! /usr/bin/env nix-shell
+#! nix-shell -i bash -p nodejs-10_x -I nixpkgs=channel:nixos-19.03
+
+echo Wrapping nodejs
+
+DIR="$( cd "$( dirname "${BASH_SOURCE[0]}" )" >/dev/null 2>&1 && pwd )"
+
+# add node wrapper
+PATH=$DIR:$PATH $(which node) --max-old-space-size=4096 $@
