@@ -6,6 +6,7 @@ app=$(basename *.cabal .cabal)
 
 nix-shell -I nixpkgs=channel:nixos-19.03 --run "cabal new-configure --ghcjs; cabal new-build --ghcjs"
 
+sed -i '0,/^/s/^/process = undefined;/' dist-newstyle/build/*/ghcjs-*/$app-*/x/$app/build/$app/$app.jsexe/all.js
 sed -i 's/function h$ap_1_0(h$RTS_577)/function h$ap_1_0_deleted(h$RTS_577)/' dist-newstyle/build/*/ghcjs-*/$app-*/x/$app/build/$app/$app.jsexe/all.js
 sed -i '0,/function h$ghcjsbn_toDouble_b/s/function h$ghcjsbn_toDouble_b/function h$ghcjsbn_toDouble_b_deleted/' dist-newstyle/build/*/ghcjs-*/$app-*/x/$app/build/$app/$app.jsexe/all.js
 sed -i '0,/function h$ghcjszmprimZCGHCJSziPrimziJSVal_con_e/s/function h$ghcjszmprimZCGHCJSziPrimziJSVal_con_e/function h$ghcjszmprimZCGHCJSziPrimziJSVal_con_e_deleted/' dist-newstyle/build/*/ghcjs-*/$app-*/x/$app/build/$app/$app.jsexe/all.js
