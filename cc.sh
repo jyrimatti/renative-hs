@@ -13,6 +13,7 @@ while true; do
   # used by ghcjsi repl
   test -f dist-newstyle/build/*/ghcjs-*/$app-*/x/$app/build/$app/$app.jsexe/all.js && sed -i 's/h$main(h$mainZCZCMainzimain);/module.exports = { h$main: h$main, h$killThread: h$killThread, h$d: h$d, h$baseZCControlziExceptionziBasezinonTermination: h$baseZCControlziExceptionziBasezinonTermination };h$main(h$mainZCZCMainzimain);/g' dist-newstyle/build/*/ghcjs-*/$app-*/x/$app/build/$app/$app.jsexe/all.js
 
+  sed -i '0,/^/s/^/process = undefined;/' dist-newstyle/build/*/ghcjs-*/$app-*/x/$app/build/$app/$app.jsexe/all.js
   sed -i 's/function h$ap_1_0(h$RTS_577)/function h$ap_1_0_deleted(h$RTS_577)/' dist-newstyle/build/*/ghcjs-*/$app-*/x/$app/build/$app/$app.jsexe/all.js
   sed -i '0,/function h$ghcjsbn_toDouble_b/s/function h$ghcjsbn_toDouble_b/function h$ghcjsbn_toDouble_b_deleted/' dist-newstyle/build/*/ghcjs-*/$app-*/x/$app/build/$app/$app.jsexe/all.js
   sed -i '0,/function h$ghcjszmprimZCGHCJSziPrimziJSVal_con_e/s/function h$ghcjszmprimZCGHCJSziPrimziJSVal_con_e/function h$ghcjszmprimZCGHCJSziPrimziJSVal_con_e_deleted/' dist-newstyle/build/*/ghcjs-*/$app-*/x/$app/build/$app/$app.jsexe/all.js
