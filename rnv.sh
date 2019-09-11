@@ -2,9 +2,6 @@
 #! nix-shell -i bash -p nodejs-10_x cocoapods git -I nixpkgs=channel:nixos-19.03
 set -eu
 
-# nix overrides system clang...
-export PATH=/usr/bin/:$PATH
-
 DIR="$( cd "$( dirname "${BASH_SOURCE[0]}" )" >/dev/null 2>&1 && pwd )"
 
 RNV=$DIR/node_modules/.bin/rnv

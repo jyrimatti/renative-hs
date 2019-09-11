@@ -5,5 +5,6 @@ echo Wrapping nodejs
 
 DIR="$( cd "$( dirname "${BASH_SOURCE[0]}" )" >/dev/null 2>&1 && pwd )"
 
-# add node wrapper
-PATH=$DIR:$PATH $(which node) --max-old-space-size=4096 $@
+# 1) add node wrapper for more memory.
+# 2) nix overrides system clang...
+PATH=$DIR:/usr/bin/:$PATH $(which node) --max-old-space-size=4096 $@
