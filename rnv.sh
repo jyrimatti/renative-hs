@@ -14,4 +14,4 @@ test -f $RNV || (cd $DIR; echo 'Installing Renative'; LD=/usr/bin/clang LDPLUSPL
 # add node wrapper
 export PATH=$DIR:$PATH
 
-(test -f $DIR/rnproject/renative.json && cd $DIR/rnproject && cp $DIR/register_addons.js $DIR/rnproject/src/ && ($RNV $@; true)) || (echo "Give 'rnproject' for project Name"; $RNV new)
+(test -f $DIR/rnproject/renative.json && cd $DIR/rnproject && cp $DIR/register_addons.js $DIR/rnproject/src/ && ($RNV $@; true)) || (echo "Give 'rnproject' for project Name"; $RNV new && cd $DIR/rnproject && $RNV configure && sed -i 's/^{/{"browser":{"child_process": false,"fs": false},/' $DIR/rnproject/package.json)
