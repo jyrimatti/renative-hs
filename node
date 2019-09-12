@@ -7,4 +7,4 @@ DIR="$( cd "$( dirname "${BASH_SOURCE[0]}" )" >/dev/null 2>&1 && pwd )"
 
 # 1) add node wrapper for more memory.
 # 2) nix overrides system clang...
-PATH=$DIR:/usr/bin/:$PATH $(which node) --max-old-space-size=4096 $@
+PATH=$DIR:/usr/bin/:$PATH LD=/usr/bin/clang LDPLUSPLUS=/usr/bin/clang++ $(which node) --max-old-space-size=4096 $@
