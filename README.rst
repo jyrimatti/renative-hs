@@ -37,18 +37,20 @@ Haskell development
 -------------------
 
 Shell with all the project dependencies
-``./shell.sh``
+
+>>> ./shell.sh
 
 Launch you default editor with all the project dependencies
-``PKGS=./default.nix sh <(curl https://hs.lahteenmaki.net/editor)``
+
+>>> PKGS=./default.nix sh <(curl https://hs.lahteenmaki.net/editor)
 
 
 Building and Continuous Compilation
 ----------------------
 
-``./build.sh``
-``./cleanbuild.sh``
-``./cc.sh``
+>>> ./build.sh
+>>> ./cleanbuild.sh
+>>> ./cc.sh
 
 
 Issues
