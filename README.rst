@@ -22,9 +22,9 @@ Trying out
 
 1. install `Nix <https://nixos.org/nixpkgs/>`_. You should already have it.
 2. ``git clone https://github.com/jyrimatti/react-native-hs``
-3. >>> ./rnv.sh # Use 'rnproject' as project Name
-4. >>> ./build.sh
-5. >>> ./rnv.sh run -p web
+3. ``./rnv.sh # Use 'rnproject' as project Name``
+4. ``./build.sh``
+5. ``./rnv.sh run -p web``
 
 
 Addons
@@ -37,18 +37,18 @@ Haskell development
 -------------------
 
 Shell with all the project dependencies
-- >>> ./shell.sh
+``./shell.sh``
 
 Launch you default editor with all the project dependencies
-- >>> PKGS=./default.nix sh <(curl https://hs.lahteenmaki.net/editor)
+``PKGS=./default.nix sh <(curl https://hs.lahteenmaki.net/editor)``
 
 
 Building and Continuous Compilation
 ----------------------
 
->>> ./build.sh
->>> ./cleanbuild.sh
->>> ./cc.sh
+``./build.sh``
+``./cleanbuild.sh``
+``./cc.sh``
 
 
 Issues
