@@ -6,6 +6,8 @@ Using `Renative <https://renative.org>`_!
 Exploring the design space of how to use Haskell in different environments.
 This project is a work-in-progress and meant to be a template or an example for "real" applications.
 
+See also `TODO example <https://github.com/jyrimatti/renative-hs-example-todo>` for a working example. 
+
 
 .. image:: screenshot.png
 
