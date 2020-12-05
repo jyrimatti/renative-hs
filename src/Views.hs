@@ -14,13 +14,14 @@
 {-# LANGUAGE UndecidableInstances      #-}
 module Views where
 
-import Prelude (($))
-import           React.Flux.Rn.Views (mkControllerView,StoreArg,ReactView)
+import           Prelude (($))
+import           React.Flux.Rn.Components.Text hiding (Center)
 import           React.Flux.Rn.Components.View
-import           React.Flux.Rn.Components.Text
+import qualified React.Flux.Rn.Types.JustifyContent as JC
+import           React.Flux.Rn.Views (mkControllerView,StoreArg,ReactView)
 import           Store (AppState)
 
 app :: ReactView ()
 app = mkControllerView @'[StoreArg AppState] "My app" $ \_ () ->
-    view [ style [ flex 1, justifyContent Center_____, alignItems Center______ ] ] $ do
+    view [ style [ flex 1, justifyContent JC.Center, alignItems Center ] ] $ do
         text [] "Hello world!"
